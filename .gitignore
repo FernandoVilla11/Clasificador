@@ -42,6 +42,3 @@ Thumbs.db
 
 # Dataset (demasiado pesado para GitHub)
 datos/
-
-# Archivos duplicados
-src/
