@@ -6,7 +6,7 @@ from preprocesamiento import load_and_preprocess
 from caracteristicas import extract_hog
 
 print("Cargando dataset...")
-X, y, classes = load_and_preprocess('../datos/imagenes')
+X, y, classes = load_and_preprocess('data/imagenes')
 
 print("Extrayendo características HOG...")
 X_hog = extract_hog(X)
@@ -22,5 +22,5 @@ y_pred = svm.predict(X_test)
 print("🔹 Resultados del modelo:")
 print(classification_report(y_test, y_pred, target_names=classes))
 
-dump(svm, '../modelos/svm_hog.pkl')
+dump(svm, 'modelos/svm_hog.pkl')
 print(" Modelo SVM (HOG) guardado en ../modelos/svm_hog.pkl")
